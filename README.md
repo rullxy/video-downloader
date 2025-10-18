@@ -106,7 +106,6 @@ tiktok-bot/
 │   ├── tiktok.js         # TikTok API integration
 │   └── removebg.js       # Background removal service
 ├── .env                  # Environment variables (create this)
-├── .env.example          # Environment template
 ├── index.js              # Main bot file
 └── package.json          # Dependencies
 ```
