@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Bot Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 TikTok Downloader Bot</h1>
+            <div class="status" id="status">Loading...</div>
+        </header>
+
+        <div class="stats-grid" id="statsGrid">
+            <!-- Stats will be loaded here -->
+        </div>
+
+        <div class="actions">
+            <button onclick="refreshStats()" class="btn">🔄 Refresh</button>
+            <button onclick="openBot()" class="btn">🤖 Open Bot</button>
+        </div>
+
+        <div class="info">
+            <p>Statistics reset when bot restarts</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
