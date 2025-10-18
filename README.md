@@ -37,8 +37,7 @@ A powerful Telegram bot that lets you download TikTok videos without watermark a
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/tiktok-bot.git
-cd tiktok-bot
+git clone https://github.com/rullxy/video-downloader.git
 ```
 
 2. **Install dependencies**
@@ -48,7 +47,7 @@ npm install
 
 3. **Setup environment variables**
 ```bash
-cp .env.example .env
+nano .env
 # Edit .env with your credentials
 ```
 
