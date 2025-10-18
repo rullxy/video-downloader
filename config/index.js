@@ -1,13 +1,6 @@
 require('dotenv').config();
 
-const config = {
+module.exports = {
   BOT_TOKEN: process.env.BOT_TOKEN,
+  REMOVE_BG_API_KEY: process.env.REMOVE_BG_API_KEY
 };
-
-// Validasi config
-if (!config.BOT_TOKEN) {
-  console.error('❌ ERROR: BOT_TOKEN tidak ditemukan di environment variables');
-  process.exit(1);
-}
-
-module.exports = config;

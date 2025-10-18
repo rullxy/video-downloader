@@ -1,23 +1,22 @@
 module.exports = (bot) => {
   bot.start((ctx) => {
     const welcomeMessage = `
-🤖 <b>Multi-Platform Downloader Bot</b>
+ <b>Bot Downloader Rullxy</b>
 
 <b>Fitur yang tersedia:</b>
 • 📹 TikTok video (tanpa watermark)
-• 🖼️ TikTok images (slideshow)
+• 🖼️ TikTok images (slideshow)  
+• 🎨 Remove background gambar
 
 <b>Cara penggunaan:</b>
-• <b>Untuk video/gambar:</b> Kirim link saja
-• <b>Untuk gambar TikTok:</b> Gunakan <code>/image [link_tiktok]</code>
-
-<b>Contoh:</b>
-<code>https://vm.tiktok.com/xxxxx/</code>
-<code>/image https://www.tiktok.com/xxxxx</code>
+• <b>Video TikTok:</b> Kirim link TikTok
+• <b>Gambar TikTok:</b> <code>/image [link_tiktok]</code>
+• <b>Remove BG:</b> <code>/removebg</code> lalu kirim gambar
 
 <b>Commands:</b>
 /start - Info bot
 /help - Bantuan
+/removebg - Hapus background gambar
     `;
     ctx.replyWithHTML(welcomeMessage);
   });
@@ -26,19 +25,22 @@ module.exports = (bot) => {
     ctx.replyWithHTML(`
 <b>Bantuan Penggunaan</b>
 
-<b>Download Media:</b>
-Kirim link dari platform yang didukung
+<b>Download TikTok:</b>
+Kirim link video/gambar TikTok
 
-<b>Download Gambar TikTok:</b>
-Gunakan format: <code>/image [link_tiktok]</code>
+<b>Remove Background:</b>
+1. Ketik <code>/removebg</code>
+2. Kirim gambar/foto
+3. Dapatkan gambar tanpa background (PNG)
 
-<b>Supported Platforms:</b>
-• TikTok (video & gambar)
+<b>Supported Image Types:</b>
+• JPG, JPEG, PNG
+• Max size: 12MB
+• Hasil: PNG transparan
 
 <b>Note:</b>
-• Video ≤50MB dikirim sebagai video
-• Video >50MB dikirim sebagai document
-• Pastikan link valid dan konten tidak private
+• RemoveBG free: 50 gambar/bulan
+• Hasil terbaik: foto orang dengan background kontras
     `);
   });
 };

@@ -5,42 +5,28 @@ class TikTokDownloader {
     try {
       console.log('📥 Processing TikTok URL:', url);
       
-      // Coba beberapa API TikTok
-      const apis = [
-        `https://www.tikwm.com/api/?url=${encodeURIComponent(url)}`,
-        `https://api.tiklydown.eu.org/api/download?url=${encodeURIComponent(url)}`
-      ];
-
-      for (const apiUrl of apis) {
-        try {
-          console.log(`🔄 Trying API: ${apiUrl}`);
-          const response = await axios.get(apiUrl, { timeout: 15000 });
-          
-          if (response.data && response.data.data && response.data.data.play) {
-            console.log('✅ TikTok video berhasil diunduh');
-            
-            return {
-              success: true,
-              data: {
-                videoUrl: response.data.data.play,
-                title: response.data.data.title || 'Video TikTok',
-                cover: response.data.data.cover,
-                duration: response.data.data.duration,
-                type: 'video'
-              }
-            };
+      const apiUrl = `https://www.tikwm.com/api/?url=${encodeURIComponent(url)}`;
+      const response = await axios.get(apiUrl, { timeout: 15000 });
+      
+      if (response.data && response.data.data && response.data.data.play) {
+        console.log('✅ TikTok video berhasil diunduh');
+        
+        return {
+          success: true,
+          data: {
+            videoUrl: response.data.data.play,
+            title: response.data.data.title || 'Video TikTok',
+            cover: response.data.data.cover,
+            duration: response.data.data.duration,
+            type: 'video'
           }
-        } catch (apiError) {
-          console.log(`❌ API failed: ${apiError.message}`);
-          continue;
-        }
+        };
+      } else {
+        return {
+          success: false,
+          message: 'Gagal mengunduh video TikTok'
+        };
       }
-      
-      return {
-        success: false,
-        message: 'Gagal mengunduh video TikTok'
-      };
-      
     } catch (error) {
       console.error('❌ TikTok download error:', error.message);
       return {

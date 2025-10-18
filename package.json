@@ -1,20 +1,16 @@
 {
-  "name": "mybot(rullxy)",
+  "name": "mya(rullxy)",
   "version": "1.0.0",
-  "description": "TikTok Downloader Bot Simple Version",
+  "description": "TikTok Downloader Bot for Termux",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "dependencies": {
-    "telegraf": "^4.12.2",
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  },
-  "engines": {
-    "node": ">=14.0.0"
+    "form-data": "^4.0.4",
+    "telegraf": "^4.12.2"
   }
 }
