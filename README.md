@@ -188,7 +188,7 @@ If you need help:
 
 <div align="center">
 
-**Made with ❤️ and ☕ by [Your Name]**
+**Made with ❤️ and ☕ by [rullxy]**
 
 [![Telegram](https://img.shields.io/badge/Contact-Bot-blue?style=for-the-badge&logo=telegram)](https://t.me/your_bot_username)
 
